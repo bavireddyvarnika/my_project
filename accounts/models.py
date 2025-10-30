@@ -13,7 +13,7 @@ def default_expiry():
 
 
 
-class User(models.Model):
+class AppUser(models.Model):
     email = models.EmailField(unique=True)
     password=models.CharField()
 

@@ -1,7 +1,7 @@
 import random
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
-from .models import User, OTPCode
+from .models import AppUser
 import json
 
 def parse_json(request):
@@ -22,7 +22,7 @@ def registeration(request):
     if not email or not password:
         return JsonResponse({"description": "Missing Fields"}, status=400)
 
-    if User.objects.filter(email=email).exists():
+    if AppUser.objects.filter(email=email).exists():
         return JsonResponse({"description": "Already exists"}, status=400)
 
     return {}
