@@ -1,0 +1,12 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.pyc
+*.so
+
+# Ignore VS Code and macOS metadata
+.vscode/
+.DS_Store
